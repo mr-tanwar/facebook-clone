@@ -1,0 +1,27 @@
+.formContainer {
+  grid-column: 7 / span 4;
+  width: 100%;
+  place-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1), 0px 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px 1rem 28px;
+  width: 400px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .formContainer {
+    grid-column: span 12;
+  }
+}
