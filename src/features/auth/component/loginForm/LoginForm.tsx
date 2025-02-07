@@ -4,6 +4,7 @@ import Button from "@/components/ui/button/Button";
 import InputField from "@/components/ui/input/InputField";
 import { BUTTON_VARIANTS } from "@/components/ui/button/enum";
 import Divider from "@/components/ui/divider/Divider";
+
 function LoginForm() {
   return (
     <div className={`col-4 ${styles.formContainer} `}>
