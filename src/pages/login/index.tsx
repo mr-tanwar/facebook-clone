@@ -1,5 +1,6 @@
-import React from "react";
-import LoginContainer from "@/features/auth/container/login/LoginContainer";
+import React from 'react';
+
+import LoginContainer from '@/features/auth/container/login/LoginContainer';
 
 function LoginPage() {
   return <LoginContainer />;

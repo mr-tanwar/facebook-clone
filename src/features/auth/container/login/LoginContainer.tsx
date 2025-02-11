@@ -1,12 +1,15 @@
-import React from "react";
-import styles from "./styles.module.css";
-import Image from "next/image";
-import LoginForm from "../../component/loginForm/LoginForm";
+import React from 'react';
+
+import Image from 'next/image';
+
+import LoginForm from '../../component/loginForm/LoginForm';
+
+import styles from './styles.module.css';
 
 function LoginContainer() {
   return (
     <div className="container">
-      <div className={`grid gutter-lg ${styles.wrapper}`}>
+      <div className={`gutter-lg grid ${styles.wrapper}`}>
         <div className={`col-4 col-sm-12 ${styles.logoContainer} `}>
           <div className={styles.logoContainer}>
             <Image

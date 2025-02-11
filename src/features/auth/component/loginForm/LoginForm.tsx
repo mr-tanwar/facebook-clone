@@ -1,9 +1,11 @@
-import React from "react";
-import styles from "./style.module.css";
-import Button from "@/components/ui/button/Button";
-import InputField from "@/components/ui/input/InputField";
-import { BUTTON_VARIANTS } from "@/components/ui/button/enum";
-import Divider from "@/components/ui/divider/Divider";
+import React from 'react';
+
+import Button from '@/components/ui/button/Button';
+import { BUTTON_VARIANTS } from '@/components/ui/button/enum';
+import Divider from '@/components/ui/divider/Divider';
+import InputField from '@/components/ui/input/InputField';
+
+import styles from './style.module.css';
 
 function LoginForm() {
   return (
@@ -21,7 +23,7 @@ function LoginForm() {
         />
         <Button onClick={() => {}}>Log in</Button>
         <Button onClick={() => {}} variant={BUTTON_VARIANTS.LINK}>
-          Forgotten password?{" "}
+          Forgotten password?{' '}
         </Button>
         <Divider />
         <div className={styles.buttonContainer}>

@@ -1,10 +1,12 @@
-import React from "react";
-import { InputFieldProps } from "./type";
-import styles from "./styles.module.css";
+import React from 'react';
+
+import { InputFieldProps } from './type';
+
+import styles from './styles.module.css';
 
 function InputField({
   placeholder,
-  type = "text",
+  type = 'text',
   handleChange = () => {},
 }: InputFieldProps) {
   return (

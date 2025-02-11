@@ -1,5 +1,5 @@
 export enum BUTTON_VARIANTS {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  LINK = "link",
+  PRIMARY = 'primary',
+  SECONDARY = 'secondary',
+  LINK = 'link',
 }

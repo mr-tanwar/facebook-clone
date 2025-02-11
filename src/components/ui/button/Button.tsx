@@ -1,7 +1,9 @@
-import React from "react";
-import styles from "./styles.module.css";
-import { BUTTON_VARIANTS } from "./enum";
-import { ButtonProps } from "./types";
+import React from 'react';
+
+import { BUTTON_VARIANTS } from './enum';
+import { ButtonProps } from './types';
+
+import styles from './styles.module.css';
 
 function Button({
   children,
