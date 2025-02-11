@@ -1,12 +1,13 @@
-import "@/styles/globals.css";
-import "@/styles/grid.css";
-import type { AppProps } from "next/app";
-import { Inter } from "next/font/google";
+import { AppProps } from 'next/app';
+import { Inter } from 'next/font/google';
+
+import '@/styles/globals.css';
+import '@/styles/grid.css';
 
 const inter = Inter({
-  subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  display: "swap", // fallback
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  display: 'swap', // fallback
 });
 
 export default function App({ Component, pageProps }: AppProps) {
