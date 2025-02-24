@@ -6,7 +6,7 @@ import LoginForm from '../../component/loginForm/LoginForm';
 
 import styles from './styles.module.css';
 
-function LoginContainer() {
+const LoginContainer = () => {
   return (
     <div className="container">
       <div className={`gutter-lg grid ${styles.wrapper}`}>
@@ -28,6 +28,6 @@ function LoginContainer() {
       </div>
     </div>
   );
-}
+};
 
 export default LoginContainer;

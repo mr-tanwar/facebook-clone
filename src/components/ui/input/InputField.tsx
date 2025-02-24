@@ -4,11 +4,11 @@ import { InputFieldProps } from './type';
 
 import styles from './styles.module.css';
 
-function InputField({
+const InputField = ({
   placeholder,
   type = 'text',
   handleChange = () => {},
-}: InputFieldProps) {
+}: InputFieldProps) => {
   return (
     <input
       className={styles.input}
@@ -17,6 +17,6 @@ function InputField({
       onChange={handleChange}
     />
   );
-}
+};
 
 export default InputField;

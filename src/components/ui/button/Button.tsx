@@ -5,11 +5,11 @@ import { ButtonProps } from './types';
 
 import styles from './styles.module.css';
 
-function Button({
+const Button = ({
   children,
   onClick,
   variant = BUTTON_VARIANTS.PRIMARY,
-}: ButtonProps) {
+}: ButtonProps) => {
   let className;
   switch (variant) {
     case BUTTON_VARIANTS.PRIMARY:
@@ -30,6 +30,6 @@ function Button({
       {children}
     </button>
   );
-}
+};
 
 export default Button;

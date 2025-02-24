@@ -1,13 +1,11 @@
 import React from 'react';
 
-import Button from '@/components/ui/button/Button';
-import { BUTTON_VARIANTS } from '@/components/ui/button/enum';
-import Divider from '@/components/ui/divider/Divider';
-import InputField from '@/components/ui/input/InputField';
+import { Button, InputField, Divider } from '@/components/ui';
+import { BUTTON_VARIANTS } from '@/components/ui/button';
 
 import styles from './style.module.css';
 
-function LoginForm() {
+const LoginForm = () => {
   return (
     <div className={`col-4 ${styles.formContainer} `}>
       <div className={styles.form}>
@@ -34,6 +32,6 @@ function LoginForm() {
       </div>
     </div>
   );
-}
+};
 
 export default LoginForm;
