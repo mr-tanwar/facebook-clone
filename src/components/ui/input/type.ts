@@ -1,5 +1,5 @@
 export interface InputFieldProps {
   placeholder: string;
-  type: string;
+  type?: string;
   handleChange: () => void;
 }
