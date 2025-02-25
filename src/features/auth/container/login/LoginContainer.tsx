@@ -1,12 +1,14 @@
 import React from 'react';
 
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 import LoginForm from '../../component/loginForm/LoginForm';
 
 import styles from './styles.module.css';
 
 const LoginContainer = () => {
+  const { t } = useTranslation('auth');
   return (
     <div className="container">
       <div className={`gutter-lg grid ${styles.wrapper}`}>
@@ -20,9 +22,7 @@ const LoginContainer = () => {
             />
           </div>
 
-          <h2 className={styles.header}>
-            Facebook helps you connect and share with the people in your life.
-          </h2>
+          <h2 className={styles.header}>{t('loginDescription')}</h2>
         </div>
         <LoginForm />
       </div>

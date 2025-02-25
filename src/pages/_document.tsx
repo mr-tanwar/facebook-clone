@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <title>Facebook</title>
         <meta name="Facebook" content="This is clone of Facebook." />
         <link rel="icon" href="/favicon.png" />
       </Head>
