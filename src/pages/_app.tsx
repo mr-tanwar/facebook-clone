@@ -5,7 +5,7 @@ import '@/styles/globals.css';
 import '@/styles/grid.css';
 import { appWithTranslation } from 'next-i18next';
 
-import '@/styles/_global.scss';
+import '@/theme/_global.scss';
 
 const inter = Inter({
   subsets: ['latin'],

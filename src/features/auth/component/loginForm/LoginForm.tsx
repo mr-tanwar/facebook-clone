@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next';
 import { Button, InputField, Divider } from '@/components/ui';
 import { BUTTON_VARIANTS } from '@/components/ui/button';
 
-import styles from './style.module.css';
+import styles from './style.module.scss';
 
 const LoginForm = () => {
   const { t } = useTranslation('auth');
