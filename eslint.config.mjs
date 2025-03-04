@@ -48,7 +48,11 @@ export default [
       ],
       '@typescript-eslint/no-unused-vars': [
         'warn',
-        { argsIgnorePattern: '^_' },
+        {
+          ignoreRestSiblings: true,
+          varsIgnorePattern: '^_',
+          argsIgnorePattern: '^_',
+        },
       ],
       '@typescript-eslint/consistent-type-imports': [
         'warn',

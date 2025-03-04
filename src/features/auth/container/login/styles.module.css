@@ -1,0 +1,18 @@
+.logoContainer {
+  grid-column: 2 / span 5;
+}
+
+.wrapper {
+  height: 100vh;
+  place-items: center;
+}
+
+.header {
+  font-weight: normal;
+}
+
+@media (max-width: 768px) {
+  .logoContainer {
+    grid-column: span 12;
+  }
+}
