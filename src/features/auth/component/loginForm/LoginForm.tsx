@@ -39,7 +39,6 @@ const LoginForm = () => {
 
   return (
     <div className={clsx('col-4', styles.formContainer)}>
-      ;
       <form onSubmit={handleSubmit(onSubmitHandler)} noValidate>
         <div className={styles.form}>
           <div>
