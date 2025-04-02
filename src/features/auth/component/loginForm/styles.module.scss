@@ -22,6 +22,11 @@
   justify-content: center;
 }
 
+.error {
+  color: $text-error;
+  padding: $spacing-1;
+}
+
 @media (max-width: 768px) {
   .formContainer {
     grid-column: span 12;

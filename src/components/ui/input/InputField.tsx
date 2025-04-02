@@ -7,14 +7,14 @@ import styles from './styles.module.css';
 const InputField = ({
   placeholder,
   type = 'text',
-  handleChange = () => {},
+  ...props
 }: InputFieldProps) => {
   return (
     <input
-      className={styles.input}
       type={type}
+      className={styles.input}
       placeholder={placeholder}
-      onChange={handleChange}
+      {...props}
     />
   );
 };
