@@ -1,5 +1,7 @@
 import React from 'react';
 
+import clsx from 'clsx';
+
 import { BUTTON_VARIANTS } from './enum';
 import { ButtonProps } from './types';
 
@@ -9,6 +11,7 @@ const Button = ({
   children,
   onClick,
   variant = BUTTON_VARIANTS.PRIMARY,
+  inputStyle,
 }: ButtonProps) => {
   let className;
   switch (variant) {
@@ -24,9 +27,9 @@ const Button = ({
     default:
       className = styles.primary;
   }
-
+  const newClass = clsx(className, inputStyle);
   return (
-    <button className={className} onClick={onClick}>
+    <button className={newClass} onClick={onClick}>
       {children}
     </button>
   );

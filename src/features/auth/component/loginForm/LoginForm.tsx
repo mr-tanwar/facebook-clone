@@ -4,10 +4,11 @@ import clsx from 'clsx';
 import { useTranslation } from 'next-i18next';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import { Button, InputField, Divider } from '@/components/ui';
-import { BUTTON_VARIANTS } from '@/components/ui/button';
+import { Button, Divider, InputField } from '@/components/ui';
+import { BUTTON_VARIANTS } from '@/components/ui/button/enum';
 
 import styles from './styles.module.scss';
+import { LoginFormProps } from './types';
 
 import { REGEX } from '@/utils';
 
@@ -21,7 +22,7 @@ const defaultValues: FormProps = {
   password: '',
 };
 
-const LoginForm = () => {
+function LoginForm({ signUpHandler }: LoginFormProps) {
   const { t } = useTranslation('auth');
   const {
     register,
@@ -84,7 +85,7 @@ const LoginForm = () => {
           </Button>
           <Divider />
           <div className={styles.buttonContainer}>
-            <Button onClick={() => {}} variant={BUTTON_VARIANTS.SECONDARY}>
+            <Button onClick={signUpHandler} variant={BUTTON_VARIANTS.SECONDARY}>
               {t('createNewAccount')}
             </Button>
           </div>
@@ -92,6 +93,6 @@ const LoginForm = () => {
       </form>
     </div>
   );
-};
+}
 
 export default LoginForm;

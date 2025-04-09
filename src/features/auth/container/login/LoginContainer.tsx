@@ -1,14 +1,20 @@
 import React from 'react';
 
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useTranslation } from 'next-i18next';
 
 import LoginForm from '../../component/loginForm/LoginForm';
 
 import styles from './styles.module.css';
 
-const LoginContainer = () => {
+function LoginContainer() {
   const { t } = useTranslation('auth');
+  const router = useRouter();
+  const signUpHandler = () => {
+    router.push('/signup');
+  };
+
   return (
     <div className="container">
       <div className={`gutter-lg grid ${styles.wrapper}`}>
@@ -24,10 +30,10 @@ const LoginContainer = () => {
 
           <h2 className={styles.header}>{t('loginDescription')}</h2>
         </div>
-        <LoginForm />
+        <LoginForm signUpHandler={signUpHandler} />
       </div>
     </div>
   );
-};
+}
 
 export default LoginContainer;

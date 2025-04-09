@@ -6,4 +6,5 @@ export interface ButtonProps {
   children: ReactNode;
   onClick: () => void;
   variant?: BUTTON_VARIANTS;
+  inputStyle?: string;
 }

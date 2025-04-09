@@ -1,4 +1,8 @@
 export interface InputFieldProps {
-  placeholder: string;
+  placeholder?: string;
   type?: string;
+  dynamicCls?: string;
+  id?: string;
+  name?: string;
+  value?: string;
 }
