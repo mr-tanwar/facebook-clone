@@ -22,7 +22,7 @@ const defaultValues: FormProps = {
   password: '',
 };
 
-function LoginForm({ signUpHandler }: LoginFormProps) {
+const LoginForm: React.FC<LoginFormProps> = ({ signUpHandler }) => {
   const { t } = useTranslation('auth');
   const {
     register,
@@ -93,6 +93,6 @@ function LoginForm({ signUpHandler }: LoginFormProps) {
       </form>
     </div>
   );
-}
+};
 
 export default LoginForm;

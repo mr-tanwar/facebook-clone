@@ -14,23 +14,23 @@ import FormField from '@/components/ui/formField';
 import { DAYS, MONTHS, YEARS } from './constants';
 import styles from './styles.module.scss';
 
-const validationSchema = Yup.object().shape({
-  firstName: Yup.string().required('First Name is required'),
-  surName: Yup.string().required('Surname is required'),
-  email: Yup.string()
-    .email('Invalid email format')
-    .required('Email is required'),
-  password: Yup.string()
-    .min(6, 'Password must be at least 6 characters')
-    .required('Password is required'),
-  gender: Yup.string().required('Gender selection is required'),
-  day: Yup.string().required('Day is required'),
-  month: Yup.string().required('Month is required'),
-  year: Yup.string().required('Year is required'),
-});
-
 const SignupForm: React.FC = () => {
   const { t } = useTranslation('auth');
+
+  const validationSchema = Yup.object().shape({
+    firstName: Yup.string().required(t('firstNameRequired')),
+    surName: Yup.string().required(t('surNameRequired')),
+    email: Yup.string()
+      .email(t('invalidEmailErr'))
+      .required(t('emailRequiredErr')),
+    password: Yup.string()
+      .min(6, t('passwordMinLengthErr'))
+      .required(t('passwordRequiredErr')),
+    gender: Yup.string().required(t('genderRequiredErr')),
+    day: Yup.string().required(t('dayRequiredErr')),
+    month: Yup.string().required(t('monthRequiredErr')),
+    year: Yup.string().required(t('yearRequiredErr')),
+  });
 
   const {
     register,
