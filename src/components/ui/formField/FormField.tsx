@@ -76,7 +76,7 @@ const FormField: React.FC<FormFieldProps> = ({
           {label} {icon && <span className={styles.icon}>{icon}</span>}
         </label>
       )}
-      <div>
+      <div className={styles.inputWrapper}>
         {renderInput()}
         {error && <span className={styles.error}>{error}</span>}
       </div>
