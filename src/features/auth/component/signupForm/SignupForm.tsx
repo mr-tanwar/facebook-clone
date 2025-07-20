@@ -7,12 +7,11 @@ import { useTranslation } from 'next-i18next';
 import { useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 
-import Button from '@/components/ui/button/Button';
-import { BUTTON_VARIANTS } from '@/components/ui/button/enum';
 import FormField from '@/components/ui/formField';
 
 import { DAYS, MONTHS, YEARS } from './constants';
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
+import { Button } from '@/components/ui/button';
 
 const SignupForm: React.FC = () => {
   const { t } = useTranslation('auth');
@@ -196,18 +195,12 @@ const SignupForm: React.FC = () => {
           {t('smsText')}
         </p>
         <div className={styles.buttonContainer}>
-          <Button
-            type="submit"
-            variant={BUTTON_VARIANTS.SECONDARY}
-            inputStyle={styles.cta}
-          >
+          <Button type="submit" variant="outline">
             {t('signUp')}
           </Button>
         </div>
 
-        <Button variant={BUTTON_VARIANTS.LINK} inputStyle={styles.accountBtn}>
-          {t('alreadyAccount')}
-        </Button>
+        <Button>{t('alreadyAccount')}</Button>
       </form>
     </div>
   );

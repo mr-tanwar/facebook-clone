@@ -5,7 +5,7 @@ import Image from 'next/image';
 
 import SignupForm from '../../component/signupForm/SignupForm';
 
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 
 function SignupContainer() {
   return (

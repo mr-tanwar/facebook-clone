@@ -5,7 +5,7 @@ import clsx from 'clsx';
 import InputField from '@/components/ui/input/InputField';
 import Select from '@/components/ui/select/Select';
 
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 
 interface FormFieldProps {
   label?: string;

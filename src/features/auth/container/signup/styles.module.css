@@ -1,7 +1,5 @@
-@use '@/theme/index.scss' as *;
-
 .container {
-  background-color: $bg-secondary;
+  /* background-color: $bg-secondary; */
   height: 100vh;
 }
 

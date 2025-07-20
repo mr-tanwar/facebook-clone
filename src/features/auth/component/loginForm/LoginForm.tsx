@@ -4,13 +4,13 @@ import clsx from 'clsx';
 import { useTranslation } from 'next-i18next';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import { Button, Divider, InputField } from '@/components/ui';
-import { BUTTON_VARIANTS } from '@/components/ui/button/enum';
+import { Divider, InputField } from '@/components/ui';
 
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 import { LoginFormProps } from './types';
 
 import { REGEX } from '@/utils';
+import { Button } from '@/components/ui/button';
 
 interface FormProps {
   email: string;
@@ -79,15 +79,16 @@ const LoginForm: React.FC<LoginFormProps> = ({ signUpHandler }) => {
             )}
           </div>
 
-          <Button onClick={() => {}}> {t('login')} </Button>
-          <Button onClick={() => {}} variant={BUTTON_VARIANTS.LINK}>
+          <Button onClick={() => {}} variant="destructive">
+            {' '}
+            {t('login')}{' '}
+          </Button>
+          <Button onClick={() => {}} variant={'secondary'}>
             {t('forgotPassword')}
           </Button>
           <Divider />
           <div className={styles.buttonContainer}>
-            <Button onClick={signUpHandler} variant={BUTTON_VARIANTS.SECONDARY}>
-              {t('createNewAccount')}
-            </Button>
+            <Button onClick={signUpHandler}>{t('createNewAccount')}</Button>
           </div>
         </div>
       </form>

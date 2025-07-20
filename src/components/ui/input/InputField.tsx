@@ -2,7 +2,7 @@ import React from 'react';
 
 import { clsx } from 'clsx';
 
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 import { InputFieldProps } from './type';
 
 const InputField = ({

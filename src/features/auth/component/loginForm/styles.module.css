@@ -1,5 +1,3 @@
-@use '@/theme/index.scss' as *;
-
 .formContainer {
   grid-column: 7 / span 4;
   width: 100%;
@@ -9,11 +7,11 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: $spacing-4;
-  background-color: $bg-primary;
-  border-radius: $spacing-2;
-  box-shadow: $shadow-btn, $shadow-modal;
-  padding: $spacing-5 $spacing-4 $spacing-7;
+  /* // gap: $spacing-4;
+  // background-color: $bg-primary;
+  // border-radius: $spacing-2;
+  // box-shadow: $shadow-btn, $shadow-modal;
+  // padding: $spacing-5 $spacing-4 $spacing-7; */
   width: 400px;
 }
 
@@ -23,8 +21,8 @@
 }
 
 .error {
-  color: $text-error;
-  padding: $spacing-1;
+  /* // color: $text-error;
+  // padding: $spacing-1; */
 }
 
 @media (max-width: 768px) {

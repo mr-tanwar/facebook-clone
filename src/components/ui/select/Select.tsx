@@ -3,7 +3,7 @@ import React from 'react';
 import clsx from 'clsx';
 
 import { ISelectProps } from './interface';
-import styles from './styles.module.scss';
+import styles from './styles.module.css';
 
 const Select: React.FC<ISelectProps> = ({ options, name, inputStyle }) => {
   return (
