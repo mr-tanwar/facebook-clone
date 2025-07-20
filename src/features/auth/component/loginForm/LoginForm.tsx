@@ -6,11 +6,11 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 
 import { Divider, InputField } from '@/components/ui';
 
-import styles from './styles.module.css';
 import { LoginFormProps } from './types';
 
 import { REGEX } from '@/utils';
 import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input';
 
 interface FormProps {
   email: string;
@@ -39,57 +39,65 @@ const LoginForm: React.FC<LoginFormProps> = ({ signUpHandler }) => {
   };
 
   return (
-    <div className={clsx('col-4', styles.formContainer)}>
+    <div className={''}>
       <form onSubmit={handleSubmit(onSubmitHandler)} noValidate>
-        <div className={styles.form}>
-          <div>
-            <InputField
-              type="email"
-              placeholder={t('emailPhoneNumber')}
-              {...register('email', {
-                required: t('emailRequiredErr'),
-                pattern: {
-                  value: REGEX.EMAIL,
-                  message: t('invalidEmailErr'),
-                },
-              })}
-            />
-            {errors.email && (
-              <p className={styles.error}>{errors.email.message}</p>
-            )}
-          </div>
-          <div>
-            <InputField
-              type="password"
-              placeholder={t('password')}
-              {...register('password', {
-                required: t('passwordRequiredErr'),
-                minLength: {
-                  value: 6,
-                  message: t('passwordMinLengthErr'),
-                },
-                pattern: {
-                  value: REGEX.PASSWORD,
-                  message: t('passwordErr'),
-                },
-              })}
-            />
-            {errors.password && (
-              <p className={styles.error}>{errors.password.message}</p>
-            )}
-          </div>
+        <div>
+          <Input
+            type="email"
+            placeholder={t('emailPhoneNumber')}
+            {...register('email', {
+              required: t('emailRequiredErr'),
+              pattern: {
+                value: REGEX.EMAIL,
+                message: t('invalidEmailErr'),
+              },
+            })}
+            className="mb-4 pb-8 pt-8 md:text-lg"
+          />
+          {errors.email && <p className={''}>{errors.email.message}</p>}
+        </div>
+        <div>
+          <Input
+            type="password"
+            placeholder={t('password')}
+            {...register('password', {
+              required: t('passwordRequiredErr'),
+              minLength: {
+                value: 6,
+                message: t('passwordMinLengthErr'),
+              },
+              pattern: {
+                value: REGEX.PASSWORD,
+                message: t('passwordErr'),
+              },
+            })}
+            className="mb-4 pb-8 pt-8 font-medium md:text-lg"
+          />
+          {errors.password && <p className={''}>{errors.password.message}</p>}
+        </div>
 
-          <Button onClick={() => {}} variant="destructive">
-            {' '}
-            {t('login')}{' '}
+        <Button
+          onClick={() => {}}
+          className="mb-4 w-full p-6 text-lg font-medium"
+        >
+          {' '}
+          {t('login')}{' '}
+        </Button>
+        <Button
+          onClick={() => {}}
+          variant={'link'}
+          className="w-full justify-center text-center font-medium"
+        >
+          {t('forgotPassword')}
+        </Button>
+        <Divider />
+        <div className="w-full text-center">
+          <Button
+            onClick={signUpHandler}
+            className="mt-8 bg-green-600 p-6 text-lg font-medium"
+          >
+            {t('createNewAccount')}
           </Button>
-          <Button onClick={() => {}} variant={'secondary'}>
-            {t('forgotPassword')}
-          </Button>
-          <Divider />
-          <div className={styles.buttonContainer}>
-            <Button onClick={signUpHandler}>{t('createNewAccount')}</Button>
-          </div>
         </div>
       </form>
     </div>
