@@ -16,3 +16,11 @@ export const GENDER_OPTIONS = [
   { label: 'male', value: 'male' },
   { label: 'custom', value: 'custom' },
 ];
+
+export const GENDER = ['female', 'male', 'custom'];
+
+export const DOB_OPTIONS = [
+  { name: 'day', items: DAYS },
+  { name: 'month', items: MONTHS },
+  { name: 'year', items: YEARS },
+];
