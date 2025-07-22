@@ -3,8 +3,8 @@ import React from 'react';
 import { useTranslation } from 'next-i18next';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import { Divider } from '@/components/ui';
 import { Button } from '@/components/ui/button';
+import Divider from '@/components/ui/divider';
 import { Input } from '@/components/ui/input';
 
 import { LoginFormProps } from './types';

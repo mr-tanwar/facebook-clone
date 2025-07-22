@@ -136,6 +136,7 @@ export default [
       'next-env.d.ts',
       'next.config.ts',
       'yarn.lock',
+      'components/ui/**',
     ],
   },
 ];

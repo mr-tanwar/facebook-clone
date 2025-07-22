@@ -1,11 +1,14 @@
 import React from 'react';
-import { useForm } from 'react-hook-form';
+
 import { yupResolver } from '@hookform/resolvers/yup';
-import * as Yup from 'yup';
 import { CircleHelpIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
+import { useForm } from 'react-hook-form';
+import * as Yup from 'yup';
 
+import { Button } from '@/components/ui/button';
+import Divider from '@/components/ui/divider';
 import {
   Form,
   FormField,
@@ -14,10 +17,9 @@ import {
   FormControl,
   FormMessage,
 } from '@/components/ui/form';
-
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { Divider } from '@/components/ui';
+import { Label } from '@/components/ui/label';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import {
   Select,
   SelectContent,
@@ -25,8 +27,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
-import { Label } from '@/components/ui/label';
 
 import { DOB_OPTIONS, GENDER } from './constants';
 
