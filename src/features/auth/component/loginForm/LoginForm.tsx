@@ -1,13 +1,12 @@
 import React from 'react';
 
-import clsx from 'clsx';
 import { useTranslation } from 'next-i18next';
 import { SubmitHandler, useForm } from 'react-hook-form';
 
-import { Button, Divider, InputField } from '@/components/ui';
-import { BUTTON_VARIANTS } from '@/components/ui/button/enum';
+import { Button } from '@/components/ui/button';
+import Divider from '@/components/ui/divider';
+import { Input } from '@/components/ui/input';
 
-import styles from './styles.module.scss';
 import { LoginFormProps } from './types';
 
 import { REGEX } from '@/utils';
@@ -39,59 +38,74 @@ const LoginForm: React.FC<LoginFormProps> = ({ signUpHandler }) => {
   };
 
   return (
-    <div className={clsx('col-4', styles.formContainer)}>
-      <form onSubmit={handleSubmit(onSubmitHandler)} noValidate>
-        <div className={styles.form}>
-          <div>
-            <InputField
-              type="email"
-              placeholder={t('emailPhoneNumber')}
-              {...register('email', {
-                required: t('emailRequiredErr'),
-                pattern: {
-                  value: REGEX.EMAIL,
-                  message: t('invalidEmailErr'),
-                },
-              })}
-            />
-            {errors.email && (
-              <p className={styles.error}>{errors.email.message}</p>
-            )}
-          </div>
-          <div>
-            <InputField
-              type="password"
-              placeholder={t('password')}
-              {...register('password', {
-                required: t('passwordRequiredErr'),
-                minLength: {
-                  value: 6,
-                  message: t('passwordMinLengthErr'),
-                },
-                pattern: {
-                  value: REGEX.PASSWORD,
-                  message: t('passwordErr'),
-                },
-              })}
-            />
-            {errors.password && (
-              <p className={styles.error}>{errors.password.message}</p>
-            )}
-          </div>
+    <form onSubmit={handleSubmit(onSubmitHandler)} noValidate>
+      <div>
+        <Input
+          type="email"
+          placeholder={t('emailPhoneNumber')}
+          {...register('email', {
+            required: t('emailRequiredErr'),
+            pattern: {
+              value: REGEX.EMAIL,
+              message: t('invalidEmailErr'),
+            },
+          })}
+          className="mb-4 pb-8 pt-8 md:text-lg"
+        />
+        {errors.email && (
+          <p className={'mb-2 font-medium text-red-600'}>
+            {errors.email.message}
+          </p>
+        )}
+      </div>
+      <div>
+        <Input
+          type="password"
+          placeholder={t('password')}
+          {...register('password', {
+            required: t('passwordRequiredErr'),
+            minLength: {
+              value: 6,
+              message: t('passwordMinLengthErr'),
+            },
+            pattern: {
+              value: REGEX.PASSWORD,
+              message: t('passwordErr'),
+            },
+          })}
+          className="mb-4 pb-8 pt-8 font-medium md:text-lg"
+        />
+        {errors.password && (
+          <p className="mb-2 font-medium text-red-600">
+            {errors.password.message}
+          </p>
+        )}
+      </div>
 
-          <Button onClick={() => {}}> {t('login')} </Button>
-          <Button onClick={() => {}} variant={BUTTON_VARIANTS.LINK}>
-            {t('forgotPassword')}
-          </Button>
-          <Divider />
-          <div className={styles.buttonContainer}>
-            <Button onClick={signUpHandler} variant={BUTTON_VARIANTS.SECONDARY}>
-              {t('createNewAccount')}
-            </Button>
-          </div>
-        </div>
-      </form>
-    </div>
+      <Button
+        onClick={() => {}}
+        className="mb-4 w-full p-6 text-lg font-medium"
+      >
+        {' '}
+        {t('login')}{' '}
+      </Button>
+      <Button
+        onClick={() => {}}
+        variant={'link'}
+        className="w-full justify-center text-center font-medium"
+      >
+        {t('forgotPassword')}
+      </Button>
+      <Divider />
+      <div className="w-full text-center">
+        <Button
+          onClick={signUpHandler}
+          className="mt-8 bg-green-600 p-6 text-lg font-medium"
+        >
+          {t('createNewAccount')}
+        </Button>
+      </div>
+    </form>
   );
 };
 
